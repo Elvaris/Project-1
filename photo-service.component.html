@@ -1,0 +1,8 @@
+<div *ngFor="let image of images">
+
+    <img [src]="getImageUrl(image)" alt="{{ image.title }}">
+  </div>
+  
+  <div (window:scroll)="onScroll()">Scroll to load more</div>
+  
+  

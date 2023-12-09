@@ -1,0 +1,35 @@
+<div class="image1">
+  <div class="container">
+    <div class="title">
+      <p>Flickr Feed</p>
+    </div>
+    <div class="text">
+      <p>Search the world!</p>
+    <div class="form-outline" data-mdb-input-init>
+      <input type="search" id="form1" class="form-control" placeholder="Search every image in the world..." aria-label="Search" />
+    </div>
+  </div>
+</div>
+<div>
+<div class="scroll-container">
+  <div *ngFor="let photo of photos">
+    <img [src]="photo.src" alt="{{ photo.title }}">
+    <div class="container">
+      
+      <!-- <div class="photos" *ngIf="images && images.items"> -->
+          <div *ngFor="let photo of photos" class="photo-container">
+            <img [src]="photo.src" alt="{{ photo.title }}" class="photo-img" />
+            <div class="photo-info">
+              <p class="title">{{ photo.title }}</p>
+              <p class="description">{{ photo.description }}</p>
+            </div>
+          </div>
+  </div>
+</div>
+
+
+
+
+
+
+
